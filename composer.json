@@ -1,6 +1,6 @@
 {
     "name": "diepxuan/theme-frontend-dxvn",
-    "description": "angular theme for Magento 2",
+    "description": "Angular theme for Magento 2",
     "require":
     {
         "php": "~5.6.5|7.0.2|7.0.4|~7.0.6",
