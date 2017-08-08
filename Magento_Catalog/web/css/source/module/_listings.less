@@ -37,7 +37,6 @@
 
             .products-grid & {
                 display: inline-block;
-                width: 100%/2;
             }
 
             &:extend(.abs-add-box-sizing all);
@@ -186,6 +185,7 @@
         .product {
             &-items {
                 margin-left: -@indent__base;
+                overflow: hidden;
             }
 
             &-item {
@@ -265,62 +265,11 @@
 //  Mobile
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
-    .products-list .product {
-        &-item {
-            table-layout: fixed;
-
-            &-photo {
-                padding: 0 @indent__s @indent__s 0;
-                width: 30%;
-            }
-        }
-    }
-}
-
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
-    .product {
-        &-item {
-            .products-grid & {
-                margin-bottom: @indent__l;
-            }
-
-            &-actions {
-                display: block;
-
-                .products-grid & {
-                    margin: @indent__s 0;
-                }
-
-                .actions-primary + .actions-secondary {
-                    display: table-cell;
-                    padding-left: 5px;
-                    white-space: nowrap;
-                    width: 50%;
-                    > * {
-                        white-space: normal;
-                    }
-                }
-
-                .actions-primary {
-                    display: table-cell;
-                }
-            }
-        }
-    }
-
-    .products-grid .product-item {
-        width: 100%/3;
-    }
-
-    .page-products,
-    .page-layout-1column,
-    .page-layout-3columns,
-    .page-products.page-layout-1column,
-    .page-products.page-layout-3columns {
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .page-products {
         .products-grid {
             .product-item {
-                width: 100%/3;
+                width: calc(~'100% / 2');
             }
         }
     }
@@ -334,92 +283,7 @@
     .page-products {
         .products-grid {
             .product-item {
-                width: 100%/3;
-            }
-        }
-    }
-
-    .page-products.page-layout-1column {
-        .products-grid {
-            .product-item {
-                width: 100%/4;
-            }
-        }
-    }
-
-    .page-products.page-layout-3columns {
-        .products-grid {
-            .product-item {
-                width: 100%/2;
-            }
-        }
-    }
-}
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
-    .products-grid {
-        .product-item {
-            width: 100%/5;
-        }
-    }
-
-    .page-layout-1column {
-        .products-grid {
-            .product-item {
-                width: 100%/6;
-            }
-        }
-    }
-
-    .page-layout-3columns {
-        .products-grid {
-            .product-item {
-                width: 100%/4;
-            }
-        }
-    }
-
-    .page-products {
-        .products-grid {
-            .product-items {
-                margin: 0;
-            }
-
-            .product-item {
-                margin-left: calc(~'(100% - 4 * 23.233%) / 3');
-                padding: 0;
-                width: 23.233%;
-
-                &:nth-child(4n + 1) {
-                    margin-left: 0;
-                }
-            }
-        }
-    }
-
-    .page-products {
-        &.page-layout-1column {
-            .products-grid {
-                .product-item {
-                    margin-left: 0;
-                    width: 100%/5;
-                }
-            }
-        }
-
-        &.page-layout-3columns {
-            .products-grid {
-                .product-item {
-                    margin-left: 1%;
-                    width: 32.667%;
-
-                    &:nth-child(3n) {
-                        margin-left: 1%;
-                    }
-
-                    &:nth-child(3n + 1) {
-                        margin-left: 0;
-                    }
-                }
+                width: calc(~'100% / 4');
             }
         }
     }
