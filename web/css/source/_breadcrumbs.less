@@ -10,5 +10,11 @@
 & when (@media-common = true) {
     .breadcrumbs {
         .lib-breadcrumbs();
+        line-height: 30px;
+        margin: 0px;
+
+        .item:not(:last-child):after {
+        	line-height: inherit;
+        }
     }
 }
