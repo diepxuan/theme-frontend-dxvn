@@ -22,9 +22,8 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
+& when (@media-common =true) {
     .payment-method-braintree {
-
         .hosted-date-wrap {
             &:extend(.abs-add-clearfix all);
         }
@@ -41,7 +40,7 @@
             &.braintree-hosted-fields-invalid:not(.braintree-hosted-fields-focused) {
                 border-color: @braintree-error__color;
 
-                & ~ .hosted-error {
+                &~.hosted-error {
                     height: auto;
                     opacity: 1;
                 }
@@ -57,7 +56,6 @@
 
             &.hosted-date {
                 @distance: 50px;
-
                 float: left;
                 margin-bottom: 7px;
                 width: 6rem;
@@ -100,13 +98,7 @@
     .braintree-paypal-account {
         padding: @braintree-paypal-account__padding-vertical 0 @braintree-paypal-account__padding-vertical @braintree-paypal-account__padding-right;
         position: relative;
-
-        .lib-icon-image(
-            @_icon-image: '@{baseDir}Magento_Braintree/images/paypal-small.png',
-            @_icon-image-position: before,
-            @_icon-image-width: @braintree-paypal-icon__width,
-            @_icon-image-height: @braintree-paypal-icon__height
-        );
+        .lib-icon-image( @_icon-image: '@{baseDir}Magento_Braintree/images/paypal-small.png', @_icon-image-position: before, @_icon-image-width: @braintree-paypal-icon__width, @_icon-image-height: @braintree-paypal-icon__height);
 
         &:before {
             left: @braintree-paypal-account__padding-right/2 - @braintree-paypal-icon__width/2;
@@ -171,7 +163,7 @@
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
     .payment-method-braintree {
         .cvv {
             .field-tooltip {
@@ -183,7 +175,7 @@
     .braintree-paypal-account {
         border-color: @color-gray80;
         border-style: solid;
-        border-width: 1px 0;
+        border-width: 1px 0px;
         display: inline-block;
         width: 50%;
     }
