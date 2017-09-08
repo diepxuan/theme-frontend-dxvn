@@ -21,7 +21,6 @@ $groupBehavior = $block->getGroupBehaviour() ? $block->getGroupBehaviour() : '{"
 <div class="sections <?php /* @escapeNotVerified */ echo $groupCss ?>">
     <?php $layout = $block->getLayout(); ?>
     <div class="section-items <?php /* @escapeNotVerified */ echo $groupCss ?>-items" data-mage-init='<?php /* @escapeNotVerified */ echo $groupBehavior ?>'>
-        <a href data-action="menu"><span><?php /* @escapeNotVerified */ echo __('Menu') ?></span></a>
         <?php foreach ($detailedInfoGroup as $name):?>
         <?php
             $html = $layout->renderElement($name);
