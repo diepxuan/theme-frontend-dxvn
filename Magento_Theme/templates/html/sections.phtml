@@ -18,23 +18,28 @@ $groupCss = $block->getGroupCss();
 $groupBehavior = $block->getGroupBehaviour() ? $block->getGroupBehaviour() : '{"tabs":{"openedState":"active"}}';
 ?>
 <?php if ($detailedInfoGroup = $block->getGroupChildNames($group, 'getChildHtml')):?>
-    <div class="sections <?php /* @escapeNotVerified */ echo $groupCss ?>">
-        <?php $layout = $block->getLayout(); ?>
-        <div class="section-items <?php /* @escapeNotVerified */ echo $groupCss ?>-items" data-mage-init='<?php /* @escapeNotVerified */ echo $groupBehavior ?>'>
-            <?php foreach ($detailedInfoGroup as $name):?>
-                <?php
-                    $html = $layout->renderElement($name);
-                    if (!trim($html) && ($block->getUseForce() != true)) {
-                        continue;
-                    }
-                    $alias = $layout->getElementAlias($name);
-                    $label = $block->getChildData($alias, 'title');
-                ?>
-                <div class="section-item-title <?php /* @escapeNotVerified */ echo $groupCss ?>-item-title" data-role="collapsible">
-                    <a class="<?php /* @escapeNotVerified */ echo $groupCss ?>-item-switch" data-toggle="switch" href="#<?php /* @escapeNotVerified */ echo $alias; ?>"><?php /* @escapeNotVerified */ echo $label; ?></a>
-                </div>
-                <div class="section-item-content <?php /* @escapeNotVerified */ echo $groupCss ?>-item-content" id="<?php /* @escapeNotVerified */ echo $alias; ?>" data-role="content"><?php /* @escapeNotVerified */ echo $html; ?></div>
+<div class="sections <?php /* @escapeNotVerified */ echo $groupCss ?>">
+    <?php $layout = $block->getLayout(); ?>
+    <div class="section-items <?php /* @escapeNotVerified */ echo $groupCss ?>-items" data-mage-init='<?php /* @escapeNotVerified */ echo $groupBehavior ?>'>
+        <a href data-action="menu"><span><?php /* @escapeNotVerified */ echo __('Menu') ?></span></a>
+        <?php foreach ($detailedInfoGroup as $name):?>
+        <?php
+            $html = $layout->renderElement($name);
+            if (!trim($html) && ($block->getUseForce() != true)) {
+                continue;
+            }
+            $alias = $layout->getElementAlias($name);
+            $label = $block->getChildData($alias, 'title');
+        ?>
+            <div class="section-item-title <?php /* @escapeNotVerified */ echo $groupCss ?>-item-title" data-role="collapsible">
+                <a class="<?php /* @escapeNotVerified */ echo $groupCss ?>-item-switch" data-toggle="switch" href="#<?php /* @escapeNotVerified */ echo $alias; ?>">
+                    <?php /* @escapeNotVerified */ echo $label; ?>
+                </a>
+            </div>
+            <div class="section-item-content <?php /* @escapeNotVerified */ echo $groupCss ?>-item-content" id="<?php /* @escapeNotVerified */ echo $alias; ?>" data-role="content">
+                <?php /* @escapeNotVerified */ echo $html; ?>
+            </div>
             <?php endforeach;?>
-        </div>
     </div>
+</div>
 <?php endif; ?>
