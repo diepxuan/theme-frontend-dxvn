@@ -1,0 +1,21 @@
+<?php
+/**
+ * Copyright © 2017 Dxvn, Inc. All rights reserved.
+ */
+
+?>
+<?php
+/**
+ * Template for displaying home page
+ *
+ * @var $block \Magento\Framework\View\Element\Template
+ */
+
+if (!($home_page_news = $this->getChildBlock('home_page_news'))) {
+    $block->setChild('home_page_news', ($home_page_news = $block->getLayout()
+            ->createBlock('Magento\Catalog\Block\Product\NewProduct'))
+            ->setTemplate('Magento_Catalog::product/list/items.phtml')
+            ->setType('new')
+            ->setNameInLayout('home_page_news'));
+}
+echo $block->getChildHtml();
