@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Dxvn, Inc. All rights reserved.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <body>
+        <referenceContainer name="content">
+            <referenceBlock name="product.info.addto">
+                <referenceBlock name="view.addto.wishlist" remove="true" />
+            </referenceBlock>
+        </referenceContainer>
+        <referenceContainer name="content.aside">
+            <referenceBlock name="related.product.addto">
+                <referenceBlock name="related.product.addto.wishlist" remove="true" />
+            </referenceBlock>
+            <referenceBlock name="upsell.product.addto">
+                <referenceBlock name="upsell.product.addto.wishlist" remove="true" />
+            </referenceBlock>
+        </referenceContainer>
+    </body>
+</page>

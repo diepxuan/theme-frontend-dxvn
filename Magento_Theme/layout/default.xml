@@ -8,7 +8,7 @@
 
     <body>
         <referenceBlock name="header.container" remove="true" />
-        <referenceBlock name="page.main.title" remove="true" />
+        <!-- <referenceBlock name="page.main.title" remove="true" /> -->
         <referenceContainer name="footer">
             <referenceBlock name="store_switcher" remove="true" />
             <referenceBlock name="footer_links" remove="true" />
