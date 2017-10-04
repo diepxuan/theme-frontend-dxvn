@@ -19,8 +19,6 @@
                     <argument name="at_code" xsi:type="string">name</argument>
                     <argument name="css_class" xsi:type="string">product</argument>
                     <argument name="at_label" xsi:type="string">none</argument>
-                    <!-- <argument name="add_base_attribute" xsi:type="string">itemprop="name"</argument> -->
-                    <!-- <argument name="add_attribute" xsi:type="string">itemprop="name"</argument> -->
                 </arguments>
             </block>
             <referenceContainer name="product.info.price">
@@ -29,9 +27,9 @@
                 <referenceBlock name="product.info.sku" remove="true" />
             </referenceContainer>
             <referenceBlock name="view.addto.compare" remove="true" />
-            <referenceBlock name="product.info.addto" remove="true" />
             <referenceContainer name="product.info.extrahint" remove="true" />
-            <referenceBlock name="product.info" remove="true" />
+            <!-- <referenceBlock name="product.info.addto" remove="true" /> -->
+            <!-- <referenceBlock name="product.info" remove="true" /> -->
         </referenceContainer>
     </body>
 </page>

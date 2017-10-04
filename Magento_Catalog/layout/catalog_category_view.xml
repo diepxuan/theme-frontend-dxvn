@@ -8,5 +8,6 @@
 
     <body>
         <referenceBlock name="require-cookie" remove="true" />
+        <referenceBlock name="page.main.title" remove="true" />
     </body>
 </page>
