@@ -3,7 +3,8 @@
     "description": "Angular theme for Magento 2",
     "require":
     {
-        "magento/framework": "100.*"
+        "php": "~7.0.13|~7.1.0",
+        "magento/framework": "101.0.*"
     },
     "type": "magento2-theme",
     "version": "0.0.4.4",
