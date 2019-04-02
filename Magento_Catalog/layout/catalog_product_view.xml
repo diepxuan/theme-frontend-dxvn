@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Dxvn, Inc. All rights reserved.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <head>
+        <css src="mage/gallery/gallery.css" />
+    </head>
+
+    <body>
+        <referenceBlock name="page.main.title" remove="true" />
+        <referenceContainer name="product.info.main">
+            <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.name"
+                   template="product/view/attribute.phtml" before="product.info.price">
+                <arguments>
+                    <argument name="at_call" xsi:type="string">getName</argument>
+                    <argument name="at_code" xsi:type="string">name</argument>
+                    <argument name="css_class" xsi:type="string">product</argument>
+                    <argument name="at_label" xsi:type="string">none</argument>
+                </arguments>
+            </block>
+            <referenceContainer name="product.info.price">
+                <referenceBlock name="product.info.stock.sku" remove="true" />
+                <referenceBlock name="product.info.review" remove="true" />
+                <referenceBlock name="product.info.sku" remove="true" />
+            </referenceContainer>
+            <referenceBlock name="view.addto.compare" remove="true" />
+            <referenceContainer name="product.info.extrahint" remove="true" />
+            <referenceBlock name="product.info.addto" remove="true" />
+            <referenceBlock name="product.info" remove="true" />
+        </referenceContainer>
+    </body>
+</page>

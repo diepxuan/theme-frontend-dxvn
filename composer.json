@@ -1,0 +1,16 @@
+{
+    "name": "diepxuan/theme-frontend-dxvn",
+    "description": "Angular theme for Magento 2",
+    "type": "magento2-theme",
+    "version": "0.0.4.5",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload":
+    {
+        "files": [
+            "registration.php"
+        ]
+    }
+}
