@@ -30,8 +30,8 @@
             </referenceContainer>
             <referenceBlock name="view.addto.compare" remove="true" />
             <referenceContainer name="product.info.extrahint" remove="true" />
-            <referenceBlock name="product.info.addto" remove="true" />
-            <referenceBlock name="product.info" remove="true" />
+            <!-- <referenceBlock name="product.info.addto" remove="true" /> -->
+            <!-- <referenceBlock name="product.info" remove="true" /> -->
         </referenceContainer>
     </body>
 </page>
