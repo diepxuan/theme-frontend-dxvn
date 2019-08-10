@@ -4,10 +4,16 @@
  * Copyright © 2017 Diepxuan, Inc. All rights reserved.
  */
 -->
-<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 
     <body>
         <referenceBlock name="header.container" remove="true" />
+        <referenceContainer name="page.top">
+            <referenceBlock name="navigation.sections">
+                <referenceBlock name="store.links" remove="true" />
+            </referenceBlock>
+        </referenceContainer>
         <referenceContainer name="footer">
             <referenceBlock name="store_switcher" remove="true" />
             <referenceBlock name="footer_links" remove="true" />
