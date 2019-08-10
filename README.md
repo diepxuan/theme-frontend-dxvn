@@ -1,4 +1,4 @@
-Angular theme for Magento 2
+Dxvn theme for Magento 2
 ==================
 [![Latest version](https://img.shields.io/badge/latest-0.0.2-green.svg)](https://github.com/diepxuan/theme-frontend-dxvn)
 [![Packagist](https://img.shields.io/badge/packagist-0.0.2-green.svg)](https://packagist.org/packages/diepxuan/theme-frontend-dxvn)

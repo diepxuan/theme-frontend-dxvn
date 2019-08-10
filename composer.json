@@ -2,13 +2,15 @@
     "name": "diepxuan/theme-frontend-dxvn",
     "description": "Angular theme for Magento 2",
     "type": "magento2-theme",
-    "version": "0.0.4.5",
+    "version": "0.0.4.6",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
     ],
-    "autoload":
-    {
+    "require": {
+        "diepxuan/module-magento": "^0.0.2"
+    },
+    "autoload": {
         "files": [
             "registration.php"
         ]
