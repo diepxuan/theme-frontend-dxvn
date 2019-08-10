@@ -2,7 +2,7 @@
     "name": "diepxuan/theme-frontend-dxvn",
     "description": "Angular theme for Magento 2",
     "type": "magento2-theme",
-    "version": "0.0.4.6",
+    "version": "0.0.4.7",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
