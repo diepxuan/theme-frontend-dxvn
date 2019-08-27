@@ -8,23 +8,21 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 
     <body>
-        <referenceBlock name="header.container" remove="true" />
+        <referenceContainer name="header.container">
+            <referenceBlock name="skip_to_content" remove="true"/>
+            <referenceBlock name="store_language" remove="true"/>
+            <referenceBlock name="top.links" remove="true"/>
+        </referenceContainer>
         <referenceContainer name="page.top">
             <referenceBlock name="navigation.sections">
-                <referenceBlock name="store.links" remove="true" />
+                <referenceBlock name="store.links" remove="true"/>
             </referenceBlock>
         </referenceContainer>
         <referenceContainer name="footer">
-            <referenceBlock name="store_switcher" remove="true" />
-            <referenceBlock name="footer_links" remove="true" />
-            <referenceBlock name="copyright" remove="true" />
-            <referenceBlock name="report.bugs" remove="true" />
-            <block class="Magento\Theme\Block\Html\Header\Logo" name="logo" after="footer_links">
-                <arguments>
-                    <argument name="logo_img_width" xsi:type="number">189</argument>
-                    <argument name="logo_img_height" xsi:type="number">64</argument>
-                </arguments>
-            </block>
+            <referenceBlock name="store_switcher" remove="true"/>
+            <referenceBlock name="footer_links" remove="true"/>
+            <!--            <referenceBlock name="copyright" remove="true"/>-->
+            <referenceBlock name="report.bugs" remove="true"/>
         </referenceContainer>
     </body>
 </page>

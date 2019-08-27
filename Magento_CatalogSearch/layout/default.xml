@@ -4,8 +4,15 @@
  * Copyright © 2017 Dxvn, Inc. All rights reserved.
  */
 -->
-<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 
     <body>
+        <referenceBlock name="top.search">
+            <referenceBlock name="advanced-search-link" remove="true"/>
+        </referenceBlock>
+        <referenceBlock name="footer_links">
+            <referenceBlock name="catalog-search-advanced-link" remove="true"/>
+        </referenceBlock>
     </body>
 </page>

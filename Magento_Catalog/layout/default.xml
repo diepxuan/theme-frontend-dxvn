@@ -8,7 +8,11 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 
     <body>
-        <referenceBlock name="catalog.compare.link" remove="true" />
-        <referenceContainer name="compare-link-wrapper" remove="true" />
+        <referenceBlock name="catalog.compare.link" remove="true"/>
+        <referenceContainer name="compare-link-wrapper" remove="true"/>
+        <referenceBlock name="main" htmlClass="column main row"/>
+        <referenceContainer name="sidebar.additional">
+            <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        </referenceContainer>
     </body>
 </page>
